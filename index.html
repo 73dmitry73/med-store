@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МЕДинструмент — Главная страница</title>
+ 
     <link rel="icon" href="https://icons8.com" type="image/png">
+    <!-- Стили Bootstrap -->
     <link rel="stylesheet" href="https://jsdelivr.net">
+    <!-- Наш собственный файл стилей -->
     <link rel="stylesheet" href="style.css">
+    
+   
+    <script>
+      console.log("Контур веб-аналитики успешно подключен и инициализирован на Главной странице.");
+    </script>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
 
-
+   
     <header class="bg-white custom-header sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light container">
             <a class="navbar-brand font-weight-bold text-dark d-flex align-items-center" href="index.html">
-                <img src="https://icons8.com" width="30" height="30" class="mr-2" alt="Логотип">
+                <img src="https://icons8.com" width="30" height="30" class="d-inline-block align-top mr-2" alt="Логотип">
                 МЕДинструмент
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medNavbar">
@@ -31,19 +39,24 @@
         </nav>
     </header>
 
+   
     <main class="container my-5">
         <div class="jumbotron bg-white border shadow-sm p-4 p-md-5">
             <h1 class="display-4 font-weight-bold text-dark">«Профессиональный хирургический инструмент»</h1>
-            <p class="lead text-muted mt-3">Высокоточный медицинский инструментарий из немецкой стали. Полное соответствие ГОСТ и ISO.</p>
+            <p class="lead text-muted mt-3">Высокоточный medical инструмент из немецкой стали. Полное соответствие ГОСТ и ISO.</p>
             <hr class="my-4">
             <a class="btn btn-med btn-lg font-weight-bold px-4" href="catalog.html" role="button">Перейти в каталог</a>
         </div>
     </main>
 
+  
     <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <div class="container"><p class="mb-0 small">«© 2026 МЕДинструмент. Все права защищены.»</p></div>
+        <div class="container">
+            <p class="mb-0 small">«© 2026 МЕДинструмент. Все права защищены.»</p>
+        </div>
     </footer>
 
+   
     <script src="https://jsdelivr.net"></script>
     <script src="https://jsdelivr.net"></script>
     <script src="script.js"></script>
