@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МЕДинструмент — Оформление заказа</title>
+    <link rel="icon" href="https://icons8.com" type="image/png">
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- ШАПКА, МЕНЮ И ЛОГОТИП -->
+    <header class="bg-white custom-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand font-weight-bold text-dark d-flex align-items-center" href="index.html">
+                <img src="https://icons8.com" width="30" height="30" class="mr-2" alt="Логотип">
+                МЕДинструмент
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог (Список товаров)</a></li>
+                    <li class="nav-item active"><a class="nav-link font-weight-bold" href="product.html">Товар и Заказ (Форма)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ГЛАВНЫЙ КОНТЕНТ: КАРТОЧКА И СТРАНИЦА С ВАЛИДНОЙ ФОРМОЙ ЗАКАЗА -->
+    <main class="container my-5">
+        <div class="row">
+            
+            <!-- Левая часть: Краткое инфо о выбранном товаре -->
+            <div class="col-md-6 mb-4">
+                <div class="bg-white p-4 border rounded shadow-sm">
+                    <h2 class="h4 font-weight-bold text-dark mb-3">Выбранный инструмент</h2>
+                    <div class="bg-light p-3 border rounded text-center font-weight-bold text-muted mb-3">[ Фото: Зажим Кохера ]</div>
+                    <p class="mb-1"><strong>Наименование:</strong> Зажим Кохера прямой, 160 мм</p>
+                    <p class="text-success font-weight-bold h5">Цена: 890 ₽</p>
+                </div>
+            </div>
+
+            <!-- Правая часть: ПОЛНОЦЕННАЯ СТРАНИЦА С ФОРМОЙ Bootstrap -->
+            <div class="col-md-6">
+                <div class="bg-white p-4 border rounded shadow-sm">
+                    <h2 class="h4 font-weight-bold text-dark mb-3">Форма быстрого заказа</h2>
+                    
+                    <form>
+                        <!-- Поле ввода имени -->
+                        <div class="form-group">
+                            <label for="userName" class="font-weight-bold small">Ваше ФИО / Название клиники</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Иванов Иван Иванович" required>
+                        </div>
+                        
+                        <!-- Поле ввода телефона -->
+                        <div class="form-group">
+                            <label for="userPhone" class="font-weight-bold small">Контактный телефон</label>
+                            <input type="tel" class="form-control" id="userPhone" placeholder="+7 (999) 000-00-00" required>
+                        </div>
+
+                        <!-- Поле выбора количества элементов формы -->
+                        <div class="form-group">
+                            <label for="itemCount" class="font-weight-bold small">Количество (шт)</label>
+                            <input type="number" class="form-control" id="itemCount" value="1" min="1">
+                        </div>
+
+                        <!-- Кнопка отправки формы со стилем Bootstrap -->
+                        <button type="submit" class="btn btn-med btn-block font-weight-bold mt-4">Отправить заказ менеджеру</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ФУТЕР САЙТА -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container"><p class="mb-0 small">«© 2026 МЕДинструмент. Все права защищены.»</p></div>
+    </footer>
+
+</body>
+</html>
