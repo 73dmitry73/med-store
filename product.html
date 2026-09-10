@@ -10,7 +10,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
 
-    <!-- ШАПКА, МЕНЮ И ЛОГОТИП -->
+    
     <header class="bg-white custom-header sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light container">
             <a class="navbar-brand font-weight-bold text-dark d-flex align-items-center" href="index.html">
@@ -27,11 +27,8 @@
         </nav>
     </header>
 
-    <!-- ГЛАВНЫЙ КОНТЕНТ: КАРТОЧКА И СТРАНИЦА С ВАЛИДНОЙ ФОРМОЙ ЗАКАЗА -->
     <main class="container my-5">
         <div class="row">
-            
-            <!-- Левая часть: Краткое инфо о выбранном товаре -->
             <div class="col-md-6 mb-4">
                 <div class="bg-white p-4 border rounded shadow-sm">
                     <h2 class="h4 font-weight-bold text-dark mb-3">Выбранный инструмент</h2>
@@ -41,44 +38,58 @@
                 </div>
             </div>
 
-            <!-- Правая часть: ПОЛНОЦЕННАЯ СТРАНИЦА С ФОРМОЙ Bootstrap -->
             <div class="col-md-6">
                 <div class="bg-white p-4 border rounded shadow-sm">
                     <h2 class="h4 font-weight-bold text-dark mb-3">Форма быстрого заказа</h2>
                     
-                    <form>
-                        <!-- Поле ввода имени -->
+                    
+                    <form id="orderForm">
                         <div class="form-group">
                             <label for="userName" class="font-weight-bold small">Ваше ФИО / Название клиники</label>
-                            <input type="text" class="form-control" id="userName" placeholder="Иванов Иван Иванович" required>
+                            <input type="text" class="form-control" id="userName" placeholder="Иванов Иван Иванович">
                         </div>
-                        
-                        <!-- Поле ввода телефона -->
                         <div class="form-group">
-                            <label for="userPhone" class="font-weight-bold small">Контактный телефон</label>
-                            <input type="tel" class="form-control" id="userPhone" placeholder="+7 (999) 000-00-00" required>
+                            <label for="userPhone" class="font-weight-bold small">Контактный телефон (Обязательное поле)</label>
+                            <input type="tel" class="form-control" id="userPhone" placeholder="+7 (999) 000-00-00">
                         </div>
-
-                        <!-- Поле выбора количества элементов формы -->
                         <div class="form-group">
                             <label for="itemCount" class="font-weight-bold small">Количество (шт)</label>
                             <input type="number" class="form-control" id="itemCount" value="1" min="1">
                         </div>
-
-                        <!-- Кнопка отправки формы со стилем Bootstrap -->
                         <button type="submit" class="btn btn-med btn-block font-weight-bold mt-4">Отправить заказ менеджеру</button>
                     </form>
 
                 </div>
             </div>
-
         </div>
     </main>
 
-    <!-- ФУТЕР САЙТА -->
+    
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="modalTitle">Уведомление</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    Текст сообщения подставится динамически из JavaScript.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary font-weight-bold" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-dark text-white text-center py-4 mt-auto">
         <div class="container"><p class="mb-0 small">«© 2026 МЕДинструмент. Все права защищены.»</p></div>
     </footer>
 
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://jsdelivr.net"></script>
+    <script src="script.js"></script>
 </body>
 </html>
